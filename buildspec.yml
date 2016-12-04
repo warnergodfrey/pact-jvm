@@ -3,13 +3,12 @@ version: 0.1
 phases:
   build:
     commands:
+      - echo Build started on `date`
       - ./gradlew build
-  documentation:
+  post_build:
     commands:
-      - ./gradlew javadoc
-  package:
-    commands:
-      - ./gradlew assembeDist
+      - echo Post-build started on `date`
+      - ./gradlew javadoc assembleDist
 artifacts:
   type: zip
   files:
