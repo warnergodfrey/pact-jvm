@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  build:
+    commands:
+      - ./gradlew build
+  documentation:
+    commands:
+      - ./gradlew javadoc
+  package:
+    commands:
+      - ./gradlew assembeDist
+artifacts:
+  type: zip
+  files:
+    - 'build/**/distributions/pact-jvm-server_*.zip'
+  discard-paths: yes
