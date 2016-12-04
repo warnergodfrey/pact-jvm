@@ -12,5 +12,5 @@ phases:
 artifacts:
   type: zip
   files:
-    - 'build/**/distributions/pact-jvm-server_*.zip'
+    - pact-jvm-server/build/2.11/distributions/pact-jvm-server_2.11-3.3.4.zip
   discard-paths: yes
